@@ -1,28 +1,50 @@
-var alamein = ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'];
-//var glenwaverley = ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Toorak'];
-//var sandringham = ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor'];
+// PT Planner
 
-var origin = prompt('Enter your origin');  
-var destination = prompt('Enter your destination'); 
-    
+var metro = {
+
+alamein: ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'],
+glenwaverly: ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Toorak'],
+sandringham: ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor']
+};
+
+var interchange = "Richmond";
+var originStop = prompt('Enter your origin');  
+var destinationStop = prompt('Enter your destination'); 
+
+// var originLine = 
+// var originIndex;
+// var destinationLine = 
+// var destinationIndex;
+
     //get origin value, compare to alamein array, return index
-    var originIndex = alamein.indexOf(origin);
+var originIndex = metro['alamein'].indexOf(originStop);   // use findIndex
 
     //get destination value, compare to alamein array, return index
-    var destinationIndex = alamein.indexOf(destination) + 1;
+var destinationIndex = metro['alamein'].indexOf(destinationStop) + 1;
 
     //alamein.indexOf(origin) > -1; (check if true/false)
 
     // use alamein.slice(originIndex, destinationIndex)
-    var path = [alamein.slice(originIndex, destinationIndex)];
+var path = [metro['alamein'].slice(originIndex, destinationIndex)];
+
 
 var journey = function () {
-    if (origin !== null && origin !== '' && destination !== null && destination !== "") {
-        console.log('Origin: ' + origin);
-        console.log('Destination ' + destination);
+    if (originStop !== null && originStop !== '' && destinationStop !== null && destinationStop !== "") {
+    var diff = metro['alamein'].indexOf(destinationStop) - metro['alamein'].indexOf(originStop);
+    var numStops = Math.abs(diff);
+        console.log('Origin: ' + originStop);
+        console.log('Destination ' + destinationStop);
         console.log(path.join()); //origin + ' ----> ' + destination);
+        console.log('Number of stops: ' + numStops);
+        
     };
 };
 
 journey()
 
+
+// if destination line === origin line, calculate for index - index stops & path, 
+//  else, find destination line
+//      find difference of Richmond and Destination stop
+//  return origin to Richmond, join Richmond to Destintion  ( path )
+//      calculate for stops
