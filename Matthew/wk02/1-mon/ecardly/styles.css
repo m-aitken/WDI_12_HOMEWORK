@@ -30,6 +30,7 @@ body {
 article {
   margin: 0 auto;
   width: 90%;
+  /*margin:*/
 }
 
 section {
@@ -67,5 +68,5 @@ footer {
 
 ul {
   list-style-type: none;
-  align-content: left;
+  /*align-content: left;*/
 }
