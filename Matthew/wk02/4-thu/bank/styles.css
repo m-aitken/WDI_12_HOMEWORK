@@ -1,0 +1,13 @@
+header {
+  border: 2px solid red;
+}
+
+body {
+  width: 800px;
+  border: 2px solid green;
+}
+
+div {
+  border: 2px solid blue;
+  display: inline-block;
+}
