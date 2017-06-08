@@ -11,24 +11,37 @@ var checkWithdrawBtn = document.querySelector('#checkWithdrawButton');
 var checkDepositBtn = document.querySelector('#checkDepositButton');
 
 
-savingsWithdraw
+var savingsWithdraw = function() {
+  // savingsBalance - value but not below zero
+  var savingsBal = savingsBalance.innerHTML;
+};
+
+var savingsDeposit = function () {
+  // savingsBalance + value
+  var balance = savingsBalance.innerHTML; // store current balance
+  balance = parseInt(balance.replace("$", ""));  // balance whole number, remove $ and space
+  var addSavings = parseInt(savingsAmount.value);   // deposit whole number
+  var total = balance + addSavings;   // store balance + deposit
+  savingsBalance.innerHTML = '$' + total; // insert total in balance field
+  savingsAmount.value = "";     // clear field
+};
 
 
-savingsDeposit
+var checkWithdraw = function () {
+  // checkBalance - value but not below zero
+  var checkBal = checkBalance.innerHTML;
+};
 
 
-
-checkWithdraw
-
-
-
-checkDeposit
-
+var checkDeposit = function () {
+  // checkBalance + value
+  var balance = checkBalance.innerHTML;
+};
 
 
 // listening to button clicks
 
-savingsWithdrawBtn.addEventListener();
-savingsDepositBtn.addEventListener();
-checkWithdrawBtn.addEventListener();
-checkDepositBtn.addEventListener();
+// savingsWithdrawBtn.addEventListener();
+savingsDepositBtn.addEventListener('click', savingsDeposit);
+// checkWithdrawBtn.addEventListener();
+// checkDepositBtn.addEventListener();
