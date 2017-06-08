@@ -1,0 +1,47 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+  width: 700px;
+}
+
+.header {
+  border: 2px solid red;
+  margin: 50px 0;
+  overflow: auto;
+}
+
+.title {
+  font-size: 60px;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  float: left;
+}
+
+.balance {
+ border: 2px solid blue;
+ font-size: 35px; 
+ padding: 5px 20px;
+ margin: 5px;
+}
+
+.account {
+  border: 2px solid green;
+  display: inline-block;
+  width: 220px;
+  height: 200px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#saveDiv {
+  background-color: #99ff99;
+  float: left;
+}
+
+#checkDiv {
+  background-color: pink;
+  float: right;
+}

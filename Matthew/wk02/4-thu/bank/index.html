@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Online Banking</title>
-</head>
-<body>
-<header>
-  <h1>Online ATM</h1>  <!--to be centered-->
-<img src="">  <!--bank logo floated left-->
-</header>
-<main>
+  <head>
+    <title>Online Banking</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class='header'>
+      <div><img id='img' src='http://www.ownwr.com/wp-content/uploads/2017/01/Bank.jpg' alt="bank" /></div>
+      <div class='title'>Online ATM</div>
+    </div>
+    
+    <div class='account' id='saveDiv'>
+      <h2>Savings</h2>
+      <p><em>Your balance is...</em></p>
+      <div class='balance' id='saveBalDiv'>$0.00</div>
+      <input type="text" id='saveAmt' placeholder="Enter amount here">
+      <button id='saveWithdrawButton'>Withdraw</button>
+      <button id='saveDepositButton'>Deposit</button>
+    </div>  
+    
 
-  <div><h2>Savings</h2></div> <!--box one-->
-    <!--"balance"-->
-    <!--input field-->
-    <!--button1--><!--button2-->
+    <div class='account' id='checkDiv'>
+      <h2>Checking</h2>
+      <p><em>Your balance is...</em></p>
+      <div class='balance' id='checkBalDiv'>$0.00</div>
+      <input type="text" id='checkAmt' placeholder="Enter amount here">
+      <button id='checkWithdrawButton'>Withdraw</button>
+      <button id='checkDepositButton'>Deposit</button>
+    </div>
 
-
-  <div><h2>Checking</h2></div> <!--box two-->
-    <!--"balance"-->
-    <!--input field-->
-    <!--button1--><!--button2-->
-
- 
-</main>
-
-
-<script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
