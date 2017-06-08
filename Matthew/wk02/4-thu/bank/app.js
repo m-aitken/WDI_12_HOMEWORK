@@ -13,29 +13,29 @@ var checkDepositBtn = document.querySelector('#checkDepositButton');
 
 var savingsWithdraw = function() {
   // savingsBalance - value but not below zero
-  var savingsBal = savingsBalance.innerHTML;
+  var savingsBal = savingsBalance.textContent;
 };
 
 var savingsDeposit = function () {
   // savingsBalance + value
-  var balance = savingsBalance.innerHTML; // store current balance
+  var balance = savingsBalance.textContent; // store current balance
   balance = parseInt(balance.replace("$", ""));  // balance whole number, remove $ and space
   var addSavings = parseInt(savingsAmount.value);   // deposit whole number
   var total = balance + addSavings;   // store balance + deposit
-  savingsBalance.innerHTML = '$' + total; // insert total in balance field
+  savingsBalance.textContent = '$' + total; // insert total in balance field
   savingsAmount.value = "";     // clear field
 };
 
 
 var checkWithdraw = function () {
   // checkBalance - value but not below zero
-  var checkBal = checkBalance.innerHTML;
+  var checkBal = checkBalance.textContent;
 };
 
 
 var checkDeposit = function () {
   // checkBalance + value
-  var balance = checkBalance.innerHTML;
+  var balance = checkBalance.textContent;
 };
 
 
