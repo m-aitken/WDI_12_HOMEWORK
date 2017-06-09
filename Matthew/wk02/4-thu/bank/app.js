@@ -13,15 +13,21 @@ var checkDepositBtn = document.querySelector('#checkDepositButton');
 
 var savingsWithdraw = function() {
   // savingsBalance - value but not below zero
-  var savingsBal = savingsBalance.textContent;
+  var savingsBal = savingsBalance.textContent;  // store current balance
+  savingsBal = parseInt(savingsBal.replace("$", "")); // balance whole number, remove $ and space
+  var savingsUpdate = parseInt(savingsAmount.value); // withdraw whole number
+  var total = savingsBal - savingsUpdate;     // store balance  - withdraw amt
+  savingsBalance.textContent = "$" + total;   // insert total in balance field
+  savingsAmount.value = "";     // clear field  
+
 };
 
 var savingsDeposit = function () {
   // savingsBalance + value
   var balance = savingsBalance.textContent; // store current balance
   balance = parseInt(balance.replace("$", ""));  // balance whole number, remove $ and space
-  var addSavings = parseInt(savingsAmount.value);   // deposit whole number
-  var total = balance + addSavings;   // store balance + deposit
+  var savingsUpdate = parseInt(savingsAmount.value);   // deposit whole number
+  var total = balance + savingsUpdate;   // store balance + deposit
   savingsBalance.textContent = '$' + total; // insert total in balance field
   savingsAmount.value = "";     // clear field
 };
@@ -41,7 +47,7 @@ var checkDeposit = function () {
 
 // listening to button clicks
 
-// savingsWithdrawBtn.addEventListener();
+savingsWithdrawBtn.addEventListener('click', savingsWithdraw);
 savingsDepositBtn.addEventListener('click', savingsDeposit);
 // checkWithdrawBtn.addEventListener();
 // checkDepositBtn.addEventListener();
