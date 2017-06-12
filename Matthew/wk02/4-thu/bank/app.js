@@ -36,12 +36,22 @@ var savingsDeposit = function () {
 var checkWithdraw = function () {
   // checkBalance - value but not below zero
   var checkBal = checkBalance.textContent;
+  checkBal = parseInt(checkBal.replace("$", ""))
+  var checkingUpdate = parseInt(checkAmount.value);
+  var total = checkBal - checkingUpdate;
+  checkBalance.textContent = "$" + total;
+  checkAmount.value = "";
 };
 
 
 var checkDeposit = function () {
   // checkBalance + value
   var balance = checkBalance.textContent;
+  balance = parseInt(balance.replace("$", ""));
+  var checkingUpdate = parseInt(checkAmount.value);
+  var total = balance + checkingUpdate;
+  checkBalance.textContent = "$" + total;
+  checkAmount.value = "";
 };
 
 
@@ -49,5 +59,5 @@ var checkDeposit = function () {
 
 savingsWithdrawBtn.addEventListener('click', savingsWithdraw);
 savingsDepositBtn.addEventListener('click', savingsDeposit);
-// checkWithdrawBtn.addEventListener();
-// checkDepositBtn.addEventListener();
+checkWithdrawBtn.addEventListener('click', checkWithdraw);
+checkDepositBtn.addEventListener('click', checkDeposit);
