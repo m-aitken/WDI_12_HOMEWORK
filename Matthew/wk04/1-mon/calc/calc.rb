@@ -37,6 +37,7 @@ puts "Option 1 - add, Option 2 - subtract, Option 3 - multiply, Option 4 - divid
     return "exponent"
 
   elsif option == 6
+    puts "For square root calculation, enter one number"
     return "square"
        
   end
@@ -64,7 +65,6 @@ def calculation(operator, num1, num2)
       return num1 ** num2
 
     elsif operator == "square"
-      puts "Enter one number"
       return Math.sqrt(num1)
   end
 end  
