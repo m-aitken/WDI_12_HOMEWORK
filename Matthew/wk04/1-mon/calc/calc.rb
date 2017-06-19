@@ -21,7 +21,7 @@ puts "'Basic Calculator'"
 
 def menu
 puts "Select calculation option:\n"
-puts "Option 1 - add, Option 2 - subtract, Option 3 - multiply, Option 4 - divide, Option 5 - exponent"
+puts "Option 1 - add, Option 2 - subtract, Option 3 - multiply, Option 4 - divide, Option 5 - exponent, Option 6 - square root"
 
   option = gets.to_i
 
@@ -64,6 +64,7 @@ def calculation(operator, num1, num2)
       return num1 ** num2
 
     elsif operator == "square"
+      puts "Enter one number"
       return Math.sqrt(num1)
   end
 end  
@@ -74,7 +75,7 @@ calc_active = 1
 
 while calc_active == 1
   
-  current_action = menu()
+  current_action = menu
 
   puts "Enter first number"
   firstNumber = gets.to_i
