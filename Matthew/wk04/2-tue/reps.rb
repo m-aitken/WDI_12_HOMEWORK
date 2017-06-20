@@ -61,14 +61,14 @@ def letterReverse (string)
   
 end
 
-
-
-
-
 # ROUND SIX
 
 # def longest (string_array)
 # return the longest word in array
 # .max returns longest
+
+def longest (string_array)
+  string_array.max_by(&:length)
+end
 
 binding.pry
