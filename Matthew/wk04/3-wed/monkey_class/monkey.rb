@@ -17,5 +17,4 @@ class Monkey
 
 end
 
-
 # binding.pry

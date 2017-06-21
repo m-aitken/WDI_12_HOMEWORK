@@ -1,5 +1,4 @@
-require_relative 'monkey.rb' # relative is only in current directory
-
+require_relative 'monkey' # relative is only in current directory
 
 adam = Monkey.new('Adam', 'Spider Monkey')
 adam.eat('fruit salad')
