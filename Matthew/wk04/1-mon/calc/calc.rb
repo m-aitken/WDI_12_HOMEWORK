@@ -47,24 +47,24 @@ end
 # if operation 2 - request numbers & return subtract result
 # etc ...
 
-def calculation(operator, num1, num2)
+def calculation(choice, num1, num2)
 
-  if operator == "add"
+  if choice == "add"
       return num1 + num2
 
-    elsif operator == "subtract"
+    elsif choice == "subtract"
       return num1 - num2
 
-    elsif operator == "multiply"
+    elsif choice == "multiply"
       return num1 * num2
 
-    elsif operator == "divide"
+    elsif choice == "divide"
       return num1 / num2
 
-    elsif operator == "exponent"
+    elsif choice == "exponent"
       return num1 ** num2
 
-    elsif operator == "square"
+    elsif choice == "square"
       return Math.sqrt(num1)
   end
 end  
