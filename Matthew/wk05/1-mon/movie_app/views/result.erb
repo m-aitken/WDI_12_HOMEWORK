@@ -1,0 +1,9 @@
+<h2>Search Result</h2>
+<!-- <p><%= @results %></p> -->
+
+
+<ul>
+  <% @results.each do |title, year, imdb, type, poster| %>
+    <li><%= title %><%= year %></li>
+  <% end %>
+</ul>
