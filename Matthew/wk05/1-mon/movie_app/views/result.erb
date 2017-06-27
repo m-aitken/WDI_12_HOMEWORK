@@ -1,9 +1,9 @@
 <h2>Search Result</h2>
-<!-- <p><%= @results %></p> -->
 
+<% @results.each do |movie| %>
+  <% @title = movie['Title'] %>
+  <p><a href="/result_details" name="<%= @title %>"><%= @title %></a></p>
+  <img src="<%= movie['Poster'] %>" alt="no poster">
 
-<ul>
-  <% @results.each do |title, year, imdb, type, poster| %>
-    <li><%= title %><%= year %></li>
-  <% end %>
-</ul>
+<% end %>
+
