@@ -18,7 +18,6 @@ get '/search_result' do
   erb :result 
 end
 
-# #{params[:search]}
 get '/result_details' do
   api = "http://omdbapi.com/?t=#{params[:title]}&apikey=2f6435d9"
   @details = HTTParty.get(api).parsed_response
