@@ -1,8 +1,9 @@
-<h2>Movie Details</h2>
+<h2><%= @details['Title']%> Details</h2>
 
-<ul><% @details.each do |listing| %>
-  <li><%= listing %></li>
-</ul>
-
-<% end %>
 <img src="<%= @details['Poster'] %>" alt="no poster">
+
+<ul>
+  <% @details.each do |listing| %>
+    <li><%= listing %></li>
+  <% end %>
+</ul>

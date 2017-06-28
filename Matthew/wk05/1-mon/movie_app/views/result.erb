@@ -1,7 +1,7 @@
 <h2>Search Result</h2>
 
 <% @results.each do |movie| %>
-    <p><a href="/result_details?title=<%= movie['Title'] %>" name="<%= movie['Title']%>"><%= movie['Title'] %></a></p>
+  <p><a href="/result_details?title=<%= movie['Title'] %>" name="<%= movie['Title']%>"><%= movie['Title'] %></a></p>
   
   <img src="<%= movie['Poster'] %>" alt="no poster">
 
