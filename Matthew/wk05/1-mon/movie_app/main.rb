@@ -4,8 +4,6 @@ require 'sinatra/reloader'
 require 'httparty'
 require 'pg'
 # OMDB API KEY = 2f6435d9
-# HTTParty.get('http://omdbapi.com/?s=MOVEINAME&apikey=2f6435d9')
-
 
 get '/' do
   erb :index
@@ -13,7 +11,7 @@ end
 
 
 get '/search_result' do
-  api = "http://omdbapi.com/?s=#{params[:search]}&apikey=2f6435d9"
+  api = "http://omdbapi.com/?s=#{params[:search]}&apikey=#{ENV["OMDB_KEY"]}"
   parsed = HTTParty.get(api).parsed_response
   @results = parsed['Search']
   # when /search_result called, store @results['Search'] in dbase
@@ -24,7 +22,7 @@ get '/search_result' do
 end
 
 get '/result_details' do
-  api = "http://omdbapi.com/?t=#{params[:title]}&apikey=2f6435d9"
+  api = "http://omdbapi.com/?t=#{params[:title]}&apikey=#{ENV["OMDB_KEY"]}"
   @details = HTTParty.get(api).parsed_response
   erb :details
 end
