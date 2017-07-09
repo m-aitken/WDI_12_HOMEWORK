@@ -9,7 +9,10 @@ for (var i=0; i<cities.length; i++) {
   option.appendChild(element);
 }
 
+ 
+var city = document.getElementById("city-type").value;
 
-
-// if citytype value = cityname
-  
+if (city === "Austin") {
+  var body = document.body;
+  body.classList.add("nyc");
+}
