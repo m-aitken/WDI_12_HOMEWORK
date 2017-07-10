@@ -10,9 +10,23 @@ for (var i=0; i<cities.length; i++) {
 }
 
  
-var city = document.getElementById("city-type").value;
+var city = document.getElementById("city-type");
 
-if (city === "Austin") {
-  var body = document.body;
-  body.classList.add("nyc");
-}
+city.addEventListener("change", function() {
+
+  if (city.value === "Austin") {
+    document.body.style.background = "url(images/austin.jpg)"
+  } 
+  else if (city.value === "Los Angeles") {
+    document.body.style.background = "url(images/la.jpg)"
+  }
+  else if (city.value === "New York") {
+    document.body.style.background = "url(images/nyc.jpg)"
+  }
+  else if (city.value === "San Francisco") {
+    document.body.style.background = "url(images/sf.jpg)"
+  }
+  else if (city.value === "Sydney") {
+    document.body.classList.add('sydney')
+  }
+})
