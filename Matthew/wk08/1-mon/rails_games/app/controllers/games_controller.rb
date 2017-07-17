@@ -1,10 +1,10 @@
 class GamesController < ApplicationController
   def index
+
   end
 
   def answers # list from wikipedia
-    [
-      "It is certain",
+    [ "It is certain",
       "It is decidedly so",
       "Without a doubt",
       "Yes definitely",
@@ -23,12 +23,17 @@ class GamesController < ApplicationController
       "My reply is no",
       "My sources say no",
       "Outlook not so good",
-      "Very doubtful"
+      "Very doubtful" 
     ]
   end  
 
   def random_answer
-    answers[Random.rand(answers.size)]
+    answers[Random.rand(answers.length)]
   end
 
-end
+
+  def secret_number
+    @number = Random.rand(10)
+    
+
+end 
