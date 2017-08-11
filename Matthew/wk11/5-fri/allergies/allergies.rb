@@ -7,14 +7,12 @@
 # pollen(64)
 # cats(128)
 
-# allergies = Allergies.new(34)
-# allergies.allergic_to?('chocolate')
-#   false
+# allergies = Allergies.new(num)
+# allergies.allergic_to?('object')
+#  => true/false
 
-# allergies.allergic_to?('cats')
-#   false
 # allergies.list
-#   ['peanuts', 'chocolate']
+#  => ['object', 'object']
 
 class Allergies
   Values = {
@@ -32,13 +30,10 @@ class Allergies
     @score = num
   end
 
-# test object name against Values hash values
   def allergic_to? object     
     Values[object] & @score != 0
   end
 
-# return array using select enumerable, using all keys from Values 
-# and return objects that pass allergic_to method 
   def list
     Values.keys.select { |object| allergic_to? object }
   end
